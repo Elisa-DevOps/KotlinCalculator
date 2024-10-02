@@ -20,9 +20,10 @@ class Calculator (val name: String) {
     fun divide(num1: Int, num2: Int): Any {
       println("dividing $num1 / $num2")
       if (num2 == 0) {
-        return println("!Error, cannot divide by 0")
+        println("Error, cannot divide by 0")
+        return 0
       } else {
-      return num1 / num2
+        return num1 / num2
       }
     }
   
@@ -42,12 +43,16 @@ class Calculator (val name: String) {
   }
   
   fun main() {
-   var letsUseCalc = Calculator("Codey")
-   println(letsUseCalc.add(5,7))
-   println(letsUseCalc.subtract(5,7))
-   println(letsUseCalc.multiply(5,7))
-   println(letsUseCalc.divide(5,0))
-   println(letsUseCalc.divide(5,7))
-   println(letsUseCalc.power(2,2))
-   println(letsUseCalc.power(5,7))
+    println("What is your name?")
+    val input = readLine()  //returns a nullable string
+    //println(input)
+    var letsUseCalc = Calculator(input!!)   //converts nullable string to a string
+    //var letsUseCalc = Calculator("Your Name")
+    println(letsUseCalc.add(5,7))
+    println(letsUseCalc.subtract(5,7))
+    println(letsUseCalc.multiply(5,7))
+    println(letsUseCalc.divide(5,0))
+    println(letsUseCalc.divide(5,7))
+    println(letsUseCalc.power(2,2))
+    println(letsUseCalc.power(5,7))
   }
