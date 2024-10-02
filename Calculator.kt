@@ -1,4 +1,6 @@
-// 
+//Project: Kotlin Calculator
+//Purpose: Basic Calculator - add, subtract, multiply, divide, power
+//Author: Elisa Aldridge
 class Calculator (val name: String) {
 
     init {
