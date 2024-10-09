@@ -4,7 +4,7 @@
 class Calculator (val name: String) {
 
     init {
-      println("$name owns this calculator.")
+      println("$name owns this calculator.\n")
     }
   
     fun add(num1: Int, num2: Int): Int {
@@ -48,11 +48,50 @@ class Calculator (val name: String) {
     //println(input)
     var letsUseCalc = Calculator(input!!)   //converts nullable string to a string
     //var letsUseCalc = Calculator("Your Name")
-    println(letsUseCalc.add(5,7))
-    println(letsUseCalc.subtract(5,7))
-    println(letsUseCalc.multiply(5,7))
-    println(letsUseCalc.divide(5,0))
-    println(letsUseCalc.divide(5,7))
-    println(letsUseCalc.power(2,2))
-    println(letsUseCalc.power(5,7))
+
+    //allow user to exit at any point
+    println("**To Exit at anytime type 'exit' to quit. Press Enter to continue calculations.**\n")
+    
+    var inputLoop = readLine()
+
+    while (inputLoop != "exit") {
+      println("Let's add 5 + 7.\n")
+      println(letsUseCalc.add(5,7))
+      println("Once you have reviewed the answer, press Enter to continue")
+      inputLoop = readLine()
+
+      println("Let's Subtract 5 - 7.\n")
+      println(letsUseCalc.subtract(5,7))
+      println("Once you have reviewed the answer, press Enter to continue")
+      readLine()
+
+      println("Let's multiply 5 * 7.\n")
+      println(letsUseCalc.multiply(5,7))
+      println("Once you have reviewed the answer, press Enter to continue")
+      readLine()
+
+      println("Let's divide 5 / 0.\n")
+      println(letsUseCalc.divide(5,0))
+      println("Once you have reviewed the answer, press Enter to continue")
+      readLine()
+
+      println("Let's divide 5 / 7.\n")
+      println(letsUseCalc.divide(5,7))
+      println("Once you have reviewed the answer, press Enter to continue")
+      readLine()
+
+      println("Let's find the power of 2 ^ 2.\n")
+      println(letsUseCalc.power(2,2))
+      println("Once you have reviewed the answer, press Enter to continue")
+      readLine()
+
+      println("Let's find the power of 5 ^ 7.\n")
+      println(letsUseCalc.power(5,7))
+      println("Once you have reviewed the answer, press Enter to Exit")
+      readLine()
+
+      break
+    }
+
+    println("You typed 'exit'. Goodbye.")
   }
