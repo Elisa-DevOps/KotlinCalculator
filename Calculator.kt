@@ -42,6 +42,10 @@ class Calculator (val name: String) {
     }
   }
   
+  fun userExit() {
+    println("You typed exit.")
+  }
+
   fun main() {
     println("What is your name?")
     val input = readLine()  //returns a nullable string
@@ -62,7 +66,7 @@ class Calculator (val name: String) {
       println("Once you have reviewed the answer, press Enter to continue")
       inputLoop = readLine()
       if (inputLoop == "exit") {
-        println("You typed exit.")
+        userExit()
         break
       }
 
@@ -71,7 +75,7 @@ class Calculator (val name: String) {
       println("Once you have reviewed the answer, press Enter to continue")
       inputLoop = readLine()
       if (inputLoop == "exit") {
-        println("You typed exit.")
+        userExit()
         break
       }
 
@@ -80,7 +84,7 @@ class Calculator (val name: String) {
       println("Once you have reviewed the answer, press Enter to continue")
       inputLoop = readLine()
       if (inputLoop == "exit") {
-        println("You typed exit.")
+        userExit()
         break
       }
 
@@ -89,7 +93,7 @@ class Calculator (val name: String) {
       println("Once you have reviewed the answer, press Enter to continue")
       inputLoop = readLine()
       if (inputLoop == "exit") {
-        println("You typed exit.")
+        userExit()
         break
       }
 
@@ -98,7 +102,7 @@ class Calculator (val name: String) {
       println("Once you have reviewed the answer, press Enter to continue")
       inputLoop = readLine()
       if (inputLoop == "exit") {
-        println("You typed exit.")
+        userExit()
         break
       }
 
@@ -107,7 +111,7 @@ class Calculator (val name: String) {
       println("Once you have reviewed the answer, press Enter to continue")
       inputLoop = readLine()
       if (inputLoop == "exit") {
-        println("You typed exit.")
+        userExit()
         break
       }
 
@@ -116,11 +120,9 @@ class Calculator (val name: String) {
       println("Once you have reviewed the answer, press Enter to Exit")
       inputLoop = readLine()
       if (inputLoop == "exit") {
-        println("You typed exit.")
+        userExit()
         break
       }
-
-      //break
     }
 
     println("Goodbye.")
