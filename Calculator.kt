@@ -57,7 +57,7 @@ class Calculator (val name: String) {
     println("**To Exit at anytime type 'exit' to quit. Press Enter to continue calculations.**\n")
     var inputLoop = readLine()
     if (inputLoop == "exit") {
-      println("You typed exit.")
+      userExit()
     }
 
     while (inputLoop != "exit") {
