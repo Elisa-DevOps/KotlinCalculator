@@ -51,47 +51,77 @@ class Calculator (val name: String) {
 
     //allow user to exit at any point
     println("**To Exit at anytime type 'exit' to quit. Press Enter to continue calculations.**\n")
-    
     var inputLoop = readLine()
+    if (inputLoop == "exit") {
+      println("You typed exit.")
+    }
 
     while (inputLoop != "exit") {
       println("Let's add 5 + 7.\n")
       println(letsUseCalc.add(5,7))
       println("Once you have reviewed the answer, press Enter to continue")
       inputLoop = readLine()
+      if (inputLoop == "exit") {
+        println("You typed exit.")
+        break
+      }
 
       println("Let's Subtract 5 - 7.\n")
       println(letsUseCalc.subtract(5,7))
       println("Once you have reviewed the answer, press Enter to continue")
-      readLine()
+      inputLoop = readLine()
+      if (inputLoop == "exit") {
+        println("You typed exit.")
+        break
+      }
 
       println("Let's multiply 5 * 7.\n")
       println(letsUseCalc.multiply(5,7))
       println("Once you have reviewed the answer, press Enter to continue")
-      readLine()
+      inputLoop = readLine()
+      if (inputLoop == "exit") {
+        println("You typed exit.")
+        break
+      }
 
       println("Let's divide 5 / 0.\n")
       println(letsUseCalc.divide(5,0))
       println("Once you have reviewed the answer, press Enter to continue")
-      readLine()
+      inputLoop = readLine()
+      if (inputLoop == "exit") {
+        println("You typed exit.")
+        break
+      }
 
       println("Let's divide 5 / 7.\n")
       println(letsUseCalc.divide(5,7))
       println("Once you have reviewed the answer, press Enter to continue")
-      readLine()
+      inputLoop = readLine()
+      if (inputLoop == "exit") {
+        println("You typed exit.")
+        break
+      }
 
       println("Let's find the power of 2 ^ 2.\n")
       println(letsUseCalc.power(2,2))
       println("Once you have reviewed the answer, press Enter to continue")
-      readLine()
+      inputLoop = readLine()
+      if (inputLoop == "exit") {
+        println("You typed exit.")
+        break
+      }
 
       println("Let's find the power of 5 ^ 7.\n")
       println(letsUseCalc.power(5,7))
       println("Once you have reviewed the answer, press Enter to Exit")
-      readLine()
+      inputLoop = readLine()
+      if (inputLoop == "exit") {
+        println("You typed exit.")
+        break
+      }
 
-      break
+      //break
     }
 
-    println("You typed 'exit'. Goodbye.")
+    println("Goodbye.")
   }
